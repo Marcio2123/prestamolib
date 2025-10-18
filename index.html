@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema de Préstamos - Demo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <section id="loginSection">
+    <div class="card login-card">
+      <h1>Inicio de Sesión</h1>
+      <input id="email" type="email" placeholder="Correo electrónico" class="input" />
+      <input id="password" type="password" placeholder="Contraseña" class="input" />
+      <button id="loginBtn" class="btn btn-primary">Ingresar</button>
+      <p class="hint">Admins ejemplo: admin1@correo.com / admin2@correo.com / admin3@correo.com (contraseña: 12345)</p>
+      <p id="loginError" class="error"></p>
+    </div>
+  </section>
+
+  <!-- ADMIN: Contenedor principal (muestra panel con botones y paneles internos) -->
+  <section id="adminSection" class="hidden">
+    <div class="admin-wrapper">
+      <div class="panel">
+        <h2>📘 Panel de Administrador</h2>
+        <button id="btnSolicitudes" class="btn btn-secondary">📋 Solicitudes pendientes</button>
+        <button id="btnSeguimiento" class="btn btn-secondary">🔍 Seguimiento de préstamos</button>
+        <button id="logoutAdmin" class="btn btn-danger">🚪 Cerrar sesión</button>
+      </div>
+
+      <!-- Sub-pantalla: Solicitudes -->
+      <div id="solicitudesPanel" class="subpanel hidden">
+        <h3>Solicitudes pendientes</h3>
+        <ul id="solicitudesList" class="list"></ul>
+        <button id="backFromSolicitudes" class="btn btn-light">⬅ Volver</button>
+      </div>
+
+      <!-- Sub-pantalla: Seguimiento -->
+      <div id="seguimientoPanel" class="subpanel hidden">
+        <h3>Seguimiento de préstamos</h3>
+        <div id="seguimientoList"></div>
+        <p id="resumenMes"></p>
+        <button id="backFromSeguimiento" class="btn btn-light">⬅ Volver</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- USUARIO: Marketplace -->
+  <section id="userSection" class="hidden">
+    <header class="user-header">
+      <h2>🎯 Marketplace de Préstamos</h2>
+      <div>
+        <span id="userBadge" class="badge"></span>
+        <button id="logoutUser" class="btn btn-danger">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <main class="marketplace">
+      <div class="item-card">
+        <img src="https://via.placeholder.com/200x140?text=Libro+A" alt="Libro A" />
+        <h3>Libro A</h3>
+        <p>Descripción corta del Libro A.</p>
+        <button class="solicitarBtn btn btn-primary" data-item="Libro A">Solicitar préstamo</button>
+      </div>
+
+      <div class="item-card">
+        <img src="https://via.placeholder.com/200x140?text=Libro+B" alt="Libro B" />
+        <h3>Libro B</h3>
+        <p>Descripción corta del Libro B.</p>
+        <button class="solicitarBtn btn btn-primary" data-item="Libro B">Solicitar préstamo</button>
+      </div>
+
+      <div class="item-card">
+        <img src="https://via.placeholder.com/200x140?text=Bicicleta" alt="Bicicleta" />
+        <h3>Bicicleta</h3>
+        <p>Descripción corta de la bicicleta.</p>
+        <button class="solicitarBtn btn btn-primary" data-item="Bicicleta">Solicitar préstamo</button>
+      </div>
+    </main>
+
+    <section class="card user-requests-card">
+      <h3>Mis solicitudes</h3>
+      <ul id="userRequestsList" class="list"></ul>
+    </section>
+  </section>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
