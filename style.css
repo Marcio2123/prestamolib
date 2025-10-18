@@ -1,0 +1,84 @@
+:root{
+  --blue:#1a73e8;
+  --blue-dark:#0c5edb;
+  --green:#10b981;
+  --red:#ef4444;
+  --card-bg:#fff;
+  --page-bg:#f5f7fb;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: Inter, Arial, sans-serif;
+  margin:0;
+  background:var(--page-bg);
+  color:#222;
+}
+
+/* Sections */
+section{padding:24px}
+.hidden{display:none}
+
+/* Card */
+.card{
+  background:var(--card-bg);
+  max-width:720px;
+  margin: 16px auto;
+  padding:20px;
+  border-radius:10px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+/* Login */
+.login-card{ max-width:420px; margin:80px auto; text-align:center }
+.input{ width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ddd; }
+.hint{ font-size:0.85rem; color:#666; margin-top:8px }
+.error{ color:#d9534f; margin-top:6px }
+
+/* Buttons */
+.btn{
+  padding:10px 12px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn-primary{ background:var(--blue); color:white }
+.btn-primary:hover{ background:var(--blue-dark) }
+.btn-secondary{ background:#e8f0ff; color:var(--blue) }
+.btn-secondary:hover{ background:#dfeeff }
+.btn-danger{ background:var(--red); color:white }
+.btn-light{ background:#f3f4f6; color:#333 }
+
+/* Admin layout */
+.admin-wrapper{ max-width:900px; margin:20px auto; display:grid; gap:20px; grid-template-columns: 1fr }
+.panel{ padding:20px; }
+
+/* Panels */
+.subpanel{ max-width:900px; margin: 0 auto; }
+
+/* Lists */
+.list{ list-style:none; padding:0; margin:0 }
+.list li{ background:#fff; margin:8px 0; padding:12px; border-radius:8px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 3px 8px rgba(0,0,0,0.04) }
+
+/* Marketplace */
+.user-header{ display:flex; justify-content:space-between; align-items:center; max-width:1100px; margin: 12px auto; padding: 0 16px }
+.badge{ background:#eef2ff; color:var(--blue); padding:6px 10px; border-radius:999px; font-weight:600; margin-right:8px }
+
+.marketplace{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding: 10px 16px;
+  max-width:1100px;
+  margin: 0 auto;
+}
+
+.item-card{ background:var(--card-bg); width:220px; padding:12px; border-radius:12px; box-shadow:0 6px 18px rgba(16,24,40,0.06); text-align:center }
+.item-card img{ width:100%; border-radius:8px; height:140px; object-fit:cover; }
+.item-card h3{ margin:10px 0 6px }
+.user-requests-card{ max-width:800px; margin:20px auto }
+
+/* seguimiento */
+.prestamo { background:#fff; margin:10px 0; padding:12px; border-radius:8px; box-shadow:0 3px 8px rgba(0,0,0,0.04) }
